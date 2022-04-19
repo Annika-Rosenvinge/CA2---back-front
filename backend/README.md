@@ -24,15 +24,15 @@ This document explains how to use this code (build, test and deploy), locally wi
 - open the Database tab and create a new data source (remember to point to a database event though this is already written in the persistence unit. This is necessary in order to use the JPQL console)
 - in the persistence window right click the pu or an entity and choose "console"
 - write a jpql query in the console and execute it.
-### In netbeans it is much simpler
+### Setup in netbeans
 - just right click the pu and choose: "Run JPQL query"
 
 ### Create model in workbench (cannot be done from Intellij - No model designer yet)
 - file-> new model
-- dobbelclick the mydb icon and change to relevant database (create one first if needed)
+- doubleclick the mydb icon and change to relevant database (create one first if needed)
 - click the Add Diagram icon
 - click the table icon in the left side panel and click in the squared area to insert new table
-- dobbelclick the new table and change name and add columns (remember to add a check mark in 'ai' for the primary key)
+- doubleclick the new table and change name and add columns (remember to add a check mark in 'ai' for the primary key)
 - do the process again to add a second table
 - now in the panel choose the 'non identifying relationship' on to many
 - click first on the child table (the one that should hold the foreign key) and then on the parent. A new relationship was now added.
@@ -41,9 +41,9 @@ This document explains how to use this code (build, test and deploy), locally wi
   - click continue again (no changes needed here)
   - Make sure the 'Export mysql table objects' is checked and Show filter to make sure that all your tables are in the 'objects to process' window -> click continue
   - Verify that the generated script looks right -> click continue
-  - click close and open the database to see the new tables, that was just created.
+  - click close and open the database to see the new tables that were just created.
 
-### create entities from database in Intellij (Persistence mappings)
+### Create entities from database in Intellij (Persistence mappings)
 - From inside the Persistence window:
 - Right-click a persistence unit, point to Generate Persistence Mapping and select By Database Schema.
 - Select the 
@@ -53,7 +53,7 @@ This document explains how to use this code (build, test and deploy), locally wi
   - open tables to see columns and add the ones with mapped type: Collection<SomeEntity> and SomeEntity
   - click OK.
 
-### In netbeans it is much easier
+### Setup in netbeans
 - Right click project name -> new -> persistence -> Entity classes From Database -> choose database connection from list -> add the tables you need -> Finish
 
 

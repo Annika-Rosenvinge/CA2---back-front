@@ -15,14 +15,12 @@ public class ApplicationConfig extends Application {
 
     /**
      * Do not modify addRestResourceClasses() method.
-     * It is automatically populated with
-     * all resources defined in the project.
-     * If required, comment out calling this method in getClasses().
+     * Insert only the resource you have created
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(errorhandling.GenericExceptionMapper.class);
         resources.add(org.glassfish.jersey.server.wadl.internal.WadlResource.class);
-        resources.add(rest.RenameMeResource.class);
+        resources.add(rest.UserResource.class);
     }
     
 }
