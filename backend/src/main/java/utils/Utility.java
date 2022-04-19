@@ -5,19 +5,12 @@
  */
 package utils;
 
-import dtos.RenameMeDTO;
 import java.util.Properties;
 import java.util.Set;
 import com.google.gson.*;
 import java.io.UnsupportedEncodingException;
-import java.util.Arrays;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
-/**
- *
- * @author tha
- */
+//Change to user
 public class Utility {
     private static Gson gson = new GsonBuilder().create();
     

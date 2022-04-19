@@ -1,7 +1,5 @@
 package facades;
 
-import dtos.RenameMeDTO;
-import entities.RenameMe;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -10,10 +8,7 @@ import javax.persistence.TypedQuery;
 //import errorhandling.RenameMeNotFoundException;
 import utils.EMF_Creator;
 
-/**
- *
- * Rename Class to a relevant name Add add relevant facade methods
- */
+//Delete this, it must be with user
 public class FacadeExample {
 
     private static FacadeExample instance;
