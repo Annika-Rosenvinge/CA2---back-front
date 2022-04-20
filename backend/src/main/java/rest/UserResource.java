@@ -16,7 +16,7 @@ import javax.ws.rs.core.SecurityContext;
 import javax.ws.rs.core.UriInfo;
 import java.awt.*;
 
-@Path("infos")
+@Path("info")
 public class UserResource {
 
     private static final EntityManagerFactory EMF = EMF_Creator.createEntityManagerFactory();
@@ -29,7 +29,7 @@ public class UserResource {
     private UriInfo context;
 
 
-    @GET
+    /*@GET
     @Produces({MediaType.APPLICATION_JSON})
     public String helloResource(){
         return "{\"msg\":\"Hello World\"}";
@@ -37,22 +37,30 @@ public class UserResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("user")
+    @Path("/user")
     @RolesAllowed("basic")
     public String getFromUser(){
         String thisUser = securityContext.getUserPrincipal().getName();
         return "{msg:" + "Hello user:" + thisUser + "}";
 
-    }
+    }*/
 
-    @GET
+    /*@GET
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("admin")
+    @Path("/admin")
     @RolesAllowed("admin")
     public String getFromAdmin(){
         String thisAdmin = securityContext.getUserPrincipal().getName();
         return "{msg:" + "Hello admin:" + thisAdmin + "}";
 
+    }*/
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/count")
+    public String count(){
+        //String count =
+        return "hej med dig";
     }
 
 }
