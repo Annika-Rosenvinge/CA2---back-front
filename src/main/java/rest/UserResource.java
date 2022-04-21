@@ -29,7 +29,7 @@ public class UserResource {
     private UriInfo context;
 
 
-    /*@GET
+    @GET
     @Produces({MediaType.APPLICATION_JSON})
     public String helloResource(){
         return "{\"msg\":\"Hello World\"}";
@@ -43,9 +43,9 @@ public class UserResource {
         String thisUser = securityContext.getUserPrincipal().getName();
         return "{msg:" + "Hello user:" + thisUser + "}";
 
-    }*/
+    }
 
-    /*@GET
+    @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/admin")
     @RolesAllowed("admin")
@@ -53,7 +53,7 @@ public class UserResource {
         String thisAdmin = securityContext.getUserPrincipal().getName();
         return "{msg:" + "Hello admin:" + thisAdmin + "}";
 
-    }*/
+    }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)

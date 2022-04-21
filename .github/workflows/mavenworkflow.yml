@@ -19,9 +19,9 @@
           with:
             mysql version: '8.0'
             #Change this before build, push and or deploy
-            mysql database: 'startcode_test'
-            mysql user: 'dev'
-            mysql password: 'ax2'
+            mysql database: 'quickstartdb_test'
+            mysql user: 'Annik'
+            mysql password: 'Flagremus13'
         - name: Cache Maven packages # cache maven repos to save time on future builds
           uses: actions/cache@v2
           with:

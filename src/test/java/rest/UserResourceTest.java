@@ -83,16 +83,7 @@ public class UserResourceTest {
                 .body("msg", equalTo("Hello World"));
     }
 
-    @Test
-    public void testCount() throws Exception {
-        given()
-                .contentType("application/json")
-                .get("/info/count").then()
-                .assertThat()
-                .statusCode(HttpStatus.OK_200.getStatusCode())
-                .body("count", equalTo(2));
-    }
-
+    @Disabled
     @Test
     public void testServerIsUp(){
         System.out.println("Server for testing is up");
