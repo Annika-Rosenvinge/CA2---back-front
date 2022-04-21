@@ -11,13 +11,11 @@ import entities.User;
 import security.errorhandling.AuthenticationException;
 import utils.EMF_Creator;
 
-//Delete this, it must be with user
 public class UserFacade{
 
     private static UserFacade instance;
     private static EntityManagerFactory emf;
     
-    //Private Constructor to ensure Singleton
     private UserFacade() {}
 
     public static UserFacade getUserFacade(EntityManagerFactory _emf) {
@@ -75,6 +73,7 @@ public class UserFacade{
         userFacade.getAll().forEach(dto->System.out.println(dto));
     }
 
+    //login metode?
     public User getVerifiedUser(String username, String password) throws AuthenticationException {
         EntityManager em = emf.createEntityManager();
         User user;
@@ -83,9 +82,13 @@ public class UserFacade{
             if (user == null || !user.verifyPassword(password)) {
                 throw new AuthenticationException("Invalid user name or password");
             }
+            else {
+                System.out.println("logging in");
+            }
         } finally {
             em.close();
         }
         return user;
     }
+
 }
